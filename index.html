@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive Website Demo</title>
+  <title>House Remodeling Design Website</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Welcome to My Business Website</h1>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <div class="dropdown-content">
+            <a href="#">Interior Design</a>
+            <a href="#">Kitchen Remodeling</a>
+            <a href="#">Bathroom Renovation</a>
+          </div>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Welcome to House Remodeling Design</h1>
   <button id="colorButton">Change Color</button>
 
   <script src="script.js"></script>
 </body>
 </html>
+
