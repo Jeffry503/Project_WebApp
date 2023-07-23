@@ -7,28 +7,41 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0; /* Reset default body margin */
 }
 
-header {
-  background-color: #333;
+#header {
+  background-color: transparent; /* Make the menubar background transparent */
   color: #fff;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
-.menu {
+.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.menu li {
+.topnav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
   margin-right: 20px;
 }
 
-.menu li a {
-  color: #fff;
-  text-decoration: none;
+.topnav a.active {
+  background-color: #b32929; /* Highlight color for active link */
+}
+
+.topnav a:hover {
+  background-color: #b32929; /* Highlight color on hover */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
@@ -36,6 +49,7 @@ header {
   position: absolute;
   background-color: #333;
   min-width: 160px;
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -52,4 +66,20 @@ header {
 h1 {
   color: #333;
   text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .topnav {
+    flex-direction: column;
+  }
+
+  .topnav a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .dropdown {
+    margin-top: 10px;
+  }
 }
